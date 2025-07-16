@@ -5,5 +5,5 @@ command = "python3 -m pip install --upgrade pip"
 command = "pip install -r requirements.txt"
 
 [phases.start]
-mitmproxy -p ${PORT:-8080} -s CustomProxy.py
+command = "mitmproxy -p ${PORT:-8080} -s CustomProxy.py"
 
