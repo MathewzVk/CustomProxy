@@ -1,0 +1,9 @@
+[phases.setup]
+command = "python3 -m pip install --upgrade pip"
+
+[phases.install]
+command = "pip install -r requirements.txt"
+
+[phases.start]
+mitmproxy -p ${PORT:-8080} -s CustomProxy.py
+
